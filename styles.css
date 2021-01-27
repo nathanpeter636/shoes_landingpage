@@ -96,7 +96,8 @@ header {
   position: relative;
 }
 
-.menu li a:before {
+.menu li a:before,
+.toggle__menu ul li a:before{
   content: "";
   position: absolute;
   width: 0;
@@ -106,7 +107,8 @@ header {
   transition: all ease 0.5s;
 }
 
-.menu li a:hover:before {
+.menu li a:hover:before,
+.toggle__menu ul li a:hover:before {
   width: 100%;
 }
 
@@ -126,13 +128,114 @@ header {
 }
 
 .slider h1 {
-    font-size: 60px;
-    font-weight: 600;
+  font-size: 50px;
+  font-weight: 600;
 }
 
 .slider p {
-    font-size: 14px;
-    line-height: 24px;
-    color: #7d7d7d;
-    margin: 30px 0 70px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #7d7d7d;
+  margin: 30px 0 70px;
+}
+
+.slider a {
+  display: inline-block;
+  padding: 15px 48px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  background-image: linear-gradient(45deg, #d001fe 0%, #1aa1d9 100%);
+  box-shadow: 0px 9px 20px 0 rgba(95, 157, 208, 0.5);
+  transition: all ease 0.2s;
+}
+
+.slider a:hover {
+  box-shadow: none;
+  margin-top: 5px;
+}
+
+#overide .slick-dots {
+  text-align: left;
+  left: 150px;
+
+}
+
+#overide .slick-dots li {
+    margin: 10px;
+}
+
+#overide .slick-dots li button:before {
+    font-size: 22px;
+}
+
+#overide .slick-dots li.slick-active button:before {
+  color: #5f9dd0;
+}
+
+.slick-track {
+    padding-bottom: 40px;
+}
+
+.shape {
+    width: 490px;
+    height: 490px;
+    background-image: linear-gradient(45deg, #d001fe 0%, #1aa1d9 100%);
+    border-radius: 100%;
+    position: absolute;
+    top: 150px;
+    right: 150px;
+    z-index: -1;
+}
+
+.shape__inner {
+    width: calc(100% - 80px);
+
+    height: calc(100% - 80px);
+
+    background-color: #fff;
+
+    border-radius: 100%;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.toggle__menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: calc(100% - 100px);
+    height: 100%;
+    background-color: #fff;
+    margin-left: 100px;
+  z-index: 8;
+  overflow-y: auto;
+  transition: all ease-in 0.5s;
+    
+    
+}
+
+.toggle__menu ul li {
+    list-style: none;
+    display: block;
+
+}
+
+.toggle__menu ul li a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 65px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    margin: 30px 100px;
+    
+
+}
+
+.toggle__menu.open {
+    left: 0;
 }
