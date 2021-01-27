@@ -1,3 +1,6 @@
+//https://easings.net/ easing styles
+
+
 $(".toggle").on("click", () => {
   $(".toggle").toggleClass("close");
   $(".toggle__menu").toggleClass("open");
@@ -29,6 +32,24 @@ $(".toggle").on("click", () => {
     });
   }
 });
+
+
+
+$(".search > img").on("click", () => {
+
+
+    $(".search > img").toggleClass("search_open")
+    console.log("123")
+    $(".search > input").toggleClass("active")
+
+    if ($(".search > img").hasClass("search_open")) {
+        $(".search > img").attr("src", "images/cancel.png")
+    } else {
+        $(".search > img").attr("src", "images/loupe.png");
+    }
+
+
+})
 
 $(function () {
   $(".slider")
@@ -78,4 +99,73 @@ $(function () {
         });
 
     })
+
+//intro animation
+
+
+    anime({
+        targets: ".left__sidebar",
+        duration: 1000,
+
+        scaleY: [0, 1],
+        easing: "linear"
+        
+      });
+
+      anime({
+        targets: ".logo img",
+        translateY: [50, 0],
+        opacity: [0, 1],
+        delay: 500,
+        easing: 'easeInOutExpo'
+        
+      });
+
+      anime({
+        targets: ".menu li",
+        translateY: [50, 0],
+        opacity: [0, 1],
+        delay: anime.stagger(150, {start: 700}),
+        easing: 'easeInOutExpo'
+        
+      });
+
+      anime({
+        targets: ".search img",
+        translateY: [50, 0],
+        opacity: [0, 1],
+        delay: 1100,
+        easing: 'easeInOutExpo'
+        
+      });
+
+      anime({
+        targets: ".slider .text > *",
+        translateY: [250, 0],
+        opacity: [0, 1],
+        delay: anime.stagger(100, {start: 1700}),
+        easing: 'easeInOutSine'
+       
+    
+    });
+
+    anime({
+        targets: ".slick-dots li",
+        translateY: [250, 0],
+        opacity: [0, 1],
+        delay: anime.stagger(100, {start: 2000}),
+        easing: 'easeInOutSine'
+       
+    
+    });
+
+    anime({
+        targets: ".slider .img img",
+        duration: 1500,
+
+        translateX: [250, 0],
+        rotate: [45, 0],
+        opacity: [0, 1],
+        delay: 3400
+      });
 });

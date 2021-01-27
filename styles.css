@@ -14,10 +14,48 @@ li {
   color: black;
 }
 
+
+
+.search {
+    display: flex;
+  align-items: center;
+}
+
 .search img {
   width: 30px;
   height: 30px;
+  position: relative;
+  z-index: 1;
+  
 }
+
+
+
+.search input {
+    background-color: aliceblue;
+    border-radius: 30px;
+    width: 0%;
+    position: absolute;
+    right: 35px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    text-indent: 15px;
+    outline: none;
+    border: none;
+    transition: all 0.5s;
+    font-size: 24px;
+    color: gray;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.active {
+    width: 60%!important;
+}
+
 
 .logo img {
   width: 50px;
