@@ -7,11 +7,12 @@
 
 body {
   overflow-x: hidden;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Oswald', sans-serif;
+  background-color: black;
 }
 
 li {
-  color: black;
+  color: white;
 }
 
 
@@ -19,6 +20,7 @@ li {
 .search {
     display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .search img {
@@ -29,10 +31,16 @@ li {
   
 }
 
+.logo h1 {
+    color: white;
+}
 
+.text h1 {
+    color: white;
+}
 
 .search input {
-    background-color: aliceblue;
+    background-image: linear-gradient(45deg, #d001fe 0%, #1aa1d9 100%);
     border-radius: 30px;
     width: 0%;
     position: absolute;
@@ -40,12 +48,16 @@ li {
     height: 45px;
     display: flex;
     align-items: center;
-    text-indent: 15px;
+    text-indent: 25px;
     outline: none;
     border: none;
     transition: all 0.5s;
     font-size: 24px;
-    color: gray;
+    color: black;
+}
+
+::placeholder {
+    color: black;
 }
 
 textarea:focus, input:focus{
@@ -121,6 +133,7 @@ header {
   list-style: none;
   display: inline-block;
   margin-right: 60px;
+  color: white;
 }
 
 .menu li:last-child {
@@ -129,7 +142,7 @@ header {
 
 .menu li a {
   text-decoration: none;
-  color: #000;
+  color: white;
   font-size: 18px;
   position: relative;
 }
@@ -140,14 +153,16 @@ header {
   position: absolute;
   width: 0;
   height: 100%;
-  background-color: #cfd6ff;
+  background-image: linear-gradient(45deg, #d001fe 0%, #1aa1d9 100%);
   z-index: -1;
   transition: all ease 0.5s;
+  
 }
 
 .menu li a:hover:before,
 .toggle__menu ul li a:hover:before {
   width: 100%;
+  height: 110%;
 }
 
 .slider .text {
@@ -207,10 +222,11 @@ header {
 
 #overide .slick-dots li button:before {
     font-size: 22px;
+    color: white;
 }
 
 #overide .slick-dots li.slick-active button:before {
-  color: #5f9dd0;
+    color: #d001fe;
 }
 
 .slick-track {
@@ -233,7 +249,7 @@ header {
 
     height: calc(100% - 80px);
 
-    background-color: #fff;
+    background-color: black;
 
     border-radius: 100%;
     margin-left: 40px;
