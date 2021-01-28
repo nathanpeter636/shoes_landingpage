@@ -7,7 +7,7 @@
 
 body {
   overflow-x: hidden;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   background-color: black;
 }
 
@@ -15,10 +15,8 @@ li {
   color: white;
 }
 
-
-
 .search {
-    display: flex;
+  display: flex;
   align-items: center;
   cursor: pointer;
 }
@@ -28,54 +26,50 @@ li {
   height: 30px;
   position: relative;
   z-index: 1;
-  
 }
 
-
-
 .logo h1 {
-    color: white;
+  color: white;
 }
 
 .text h1 {
-    color: white;
+  color: white;
 }
 
 .slider p:hover {
-  transform: scale(1.1)!important;
+  transform: scale(1.1) !important;
   cursor: pointer;
-  
 }
 
 .search input {
-    background-image: linear-gradient(45deg, #d001fe 0%, #1aa1d9 100%);
-    border-radius: 30px;
-    width: 0%;
-    position: absolute;
-    right: 35px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    text-indent: 25px;
-    outline: none;
-    border: none;
-    transition: all 0.5s;
-    font-size: 24px;
-    color: black;
+  background-image: linear-gradient(45deg, #d001fe 0%, #1aa1d9 100%);
+  border-radius: 30px;
+  width: 0%;
+  position: absolute;
+  right: 35px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  text-indent: 25px;
+  outline: none;
+  border: none;
+  transition: all 0.5s;
+  font-size: 24px;
+  color: black;
 }
 
 ::placeholder {
-    color: black;
+  color: black;
 }
 
-textarea:focus, input:focus{
-    outline: none;
+textarea:focus,
+input:focus {
+  outline: none;
 }
 
 .active {
-    width: 60%!important;
+  width: 60% !important;
 }
-
 
 .logo img {
   width: 50px;
@@ -130,7 +124,6 @@ textarea:focus, input:focus{
   width: calc(100% - 100px);
   margin-left: 100px;
   height: 100vh;
-
 }
 
 header {
@@ -158,7 +151,7 @@ header {
 }
 
 .menu li a:before,
-.toggle__menu ul li a:before{
+.toggle__menu ul li a:before {
   content: "";
   position: absolute;
   width: 0;
@@ -166,7 +159,6 @@ header {
   background-image: linear-gradient(45deg, #d001fe 0%, #1aa1d9 100%);
   z-index: -1;
   transition: all ease 0.5s;
-  
 }
 
 .menu li a:hover:before,
@@ -223,102 +215,90 @@ header {
 #overide .slick-dots {
   text-align: left;
   left: 150px;
-  bottom: 25px
-
+  bottom: 25px;
 }
 
 #overide .slick-dots li {
-    margin: 10px;
+  margin: 10px;
 }
 
 #overide .slick-dots li button:before {
-    font-size: 22px;
-    color: white;
+  font-size: 22px;
+  color: white;
 }
 
 #overide .slick-dots li.slick-active button:before {
-    color: #d001fe;
+  color: #d001fe;
 }
 
 .slick-track {
-    padding-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .shape {
-    width: 490px;
-    height: 490px;
-    background-image: linear-gradient(45deg, #d001fe 0%, #1aa1d9 100%);
-    border-radius: 100%;
-    position: absolute;
-    top: 150px;
-    right: 150px;
-    z-index: -1;
+  width: 490px;
+  height: 490px;
+  background-image: linear-gradient(45deg, #d001fe 0%, #1aa1d9 100%);
+  border-radius: 100%;
+  position: absolute;
+  top: 150px;
+  right: 150px;
+  z-index: -1;
 }
 
 .shape__inner {
-    width: calc(100% - 80px);
+  width: calc(100% - 80px);
 
-    height: calc(100% - 80px);
+  height: calc(100% - 80px);
 
-    background-color: black;
+  background-color: black;
 
-    border-radius: 100%;
-    margin-left: 40px;
-    margin-top: 40px;
+  border-radius: 100%;
+  margin-left: 40px;
+  margin-top: 40px;
 }
 
 .toggle__menu {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: calc(100% - 100px);
-    height: 100%;
-    background-color: #fff;
-    margin-left: 100px;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: calc(100% - 100px);
+  height: 100%;
+  background-color: #fff;
+  margin-left: 100px;
   z-index: 8;
   overflow-y: auto;
   transition: all ease-in 0.5s;
-    
-    
 }
 
 .toggle__menu ul li {
-    list-style: none;
-    display: block;
-
+  list-style: none;
+  display: block;
 }
 
 .toggle__menu ul li a {
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-    font-size: 65px;
-    font-weight: 700;
-    color: #000;
-    text-transform: uppercase;
-    margin: 30px 100px;
-    
-
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 65px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  margin: 30px 100px;
 }
 
 .toggle__menu.open {
-    left: 0;
+  left: 0;
 }
 
-
-.arrow
-{
+.arrow {
   position: absolute;
   bottom: 2rem;
   left: 50%;
-  margin-left:-20px;
+  margin-left: -20px;
   width: 40px;
   height: 40px;
 
-
-  /**
-   * Dark Arrow Down
-   */
   background-image: url("./images/arrow.png");
   background-size: contain;
 }
@@ -328,7 +308,11 @@ header {
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -337,4 +321,11 @@ header {
   60% {
     transform: translateY(-15px);
   }
+}
+
+.make_it_click {
+  color: gray;
+  position: absolute;
+  left: 16%;
+  bottom: 12%;
 }
